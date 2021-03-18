@@ -1,0 +1,161 @@
+.LeftPaneWrapper{
+    width: 300px;
+    background-color: rgb(187, 187, 187);
+    padding: 5px;
+    height: 92.5vh;
+}
+
+._lp_inner{
+    height: 100%;
+    overflow-y: auto;
+}
+
+._lp_inner::-webkit-scrollbar{
+    width: 2px;
+}
+
+._lp_inner h3::after{
+    content: '';
+    height: 1px;
+    width: 80%;
+    display: block;
+    background-color: gray;
+    margin: 4px auto;
+}
+
+._userBox{
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+._userBox div img{
+    width: 50px;
+    border-radius: 50px;
+    align-items: center;
+}
+
+._userBox ._userEmail{
+    display: grid;
+    place-content: center;
+    margin: 0 15px 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+._onlineUsers {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 0 5px 0;
+    height: 43%;
+}
+
+._onlineUsers ._all_ol_users{
+    height: 87%;
+    overflow-y: auto;
+}
+
+._onlineUsers ._ol_header{
+    text-align: center;
+}
+
+._onlineUsers h3{
+    font-size: 18px;
+    font-family: 'calibri';
+}
+
+._onlineUsers ._ol_userBox {
+    display: flex;
+    margin: 0 0 10px 0;
+    padding: 3px;
+    cursor: pointer;
+}
+
+._onlineUsers ._ol_userBox img{
+    width: 40px;
+    border-radius: 50px;
+}
+
+._onlineUsers ._ol_userBox ._userEmail_text{
+    margin: 0 0 0 15px;
+}
+
+._onlineUsers ._ol_userBox ._userEmail_text p{
+    margin: 0;
+}
+
+._onlineUsers ._ol_userBox ._userEmail_text p:first-child{
+    font-weight: bold;
+}
+
+._onlineUsers ._ol_userBox ._userEmail_text p:nth-child(2){
+    font-size: 15px;
+    color: gray;
+}
+
+._blockedUsers{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    height: 43%;
+}
+
+._blockedUsers h3{
+    font-size: 18px;
+    font-family: 'calibri';
+    text-align: center;
+}
+
+._blockedUsers ._blocked_users{
+    height: 87%;
+    overflow-y: auto;
+}
+
+._blockedUsers 
+._blocked_users ._bl_userBox {
+    display: flex;
+    margin: 0 0 10px 0;
+    padding: 3px;
+    cursor: pointer;
+}
+
+._blocked_users ._bl_userBox img{
+    width: 40px;
+    border-radius: 50px;
+}
+
+._blocked_users ._userEmail_text{
+    margin: 0 0 0 15px;
+}
+
+._blocked_users ._bl_userBox ._userEmail_text p{
+    margin: 0;
+}
+
+._blocked_users 
+._bl_userBox 
+._userEmail_text 
+p:first-child{
+    font-weight: bold;
+}
+
+._blocked_users 
+._bl_userBox 
+._userEmail_text p:nth-child(2){
+    font-size: 15px;
+    color: gray;
+}
+
+._all_ol_users::-webkit-scrollbar,
+._blocked_users::-webkit-scrollbar{
+    width: 4px;
+    background-color: rgb(182, 182, 182);
+    border-radius: 4px;
+}
+
+._all_ol_users::-webkit-scrollbar-thumb,
+._blocked_users::-webkit-scrollbar-thumb{
+    background-color: rgb(136, 136, 136);
+}

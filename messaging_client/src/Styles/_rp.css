@@ -1,0 +1,118 @@
+.rightPane{
+    width: 100%;
+    background-color: rgb(233, 230, 230);
+    /* padding: 5px; */
+    height: 92.5vh;
+}
+
+.rightPane ._rp_header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightPane
+._rp_header
+._sl_userBox{
+    display: flex;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+.rightPane
+._rp_header
+._sl_userBox div img{
+    width: 40px;
+    border-radius: 50px;
+}
+
+._sl_userBox ._userEmail_text{
+    margin: 0 0 0 15px;
+    display: grid;
+    place-content: center;
+}
+
+._sl_userBox ._userEmail_text p{
+    margin: 0;
+    font-weight: bold;
+}
+
+._rp_header ._sl_btn{
+    height: 40px;
+    margin: 0 20px;
+    background-color: gray;
+    color: white;
+}
+
+._ChartZone{
+    height: 77%;
+    background-color: rgb(78, 78, 78);
+    padding: 5px;
+    overflow-y: auto;
+}
+
+._ChartZone::-webkit-scrollbar{
+    width: 2px;
+}
+
+._ChartZone ._message{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 5px 0 10px 0;
+    padding: 10px;
+    max-width: 500px;
+}
+
+._ChartZone ._message p{
+    margin: 0;
+}
+
+._ChartZone .rc ._ms_date{
+    font-style: italic;
+    text-align: right;
+}
+
+._ChartZone .me {
+    /* float: right; */
+    background-color: azure;
+    display: block;
+    margin-left: auto;
+}
+
+._messageBox{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    padding: 5px;
+}
+
+._messageBox ._inputBox{
+    width: 90%;
+    margin: 2px;
+}
+
+._messageBox textarea{
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 2px 1px gray;
+    border-radius: 15px;
+    resize: none;
+}
+
+._messageBox textarea:focus{
+    outline: none;
+}
+
+._messageBox .send_button{
+    margin:  -8px 10px 0 20px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+._messageBox .send_button:hover{
+    font-size: 30px;
+}

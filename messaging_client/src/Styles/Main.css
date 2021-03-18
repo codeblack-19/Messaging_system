@@ -1,0 +1,5 @@
+._mainWrapper ._pane{
+    display: flex;
+    height: 92.5vh;
+    overflow: hidden;
+}
