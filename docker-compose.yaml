@@ -1,6 +1,7 @@
 version: "3"
 services:
   react-app:
+    build: ./messaging_client
     image: react-app
     stdin_open: true
     ports: 
@@ -8,6 +9,7 @@ services:
     networks:
       - mern-app
   api-server:
+    build: ./Messaging_Api
     image: server-api
     ports:
       - "3001:3001"
