@@ -92,8 +92,6 @@ router.get('/offline/:id', function(req, res){
     Users.updateOne({_id: id}, 
         {$set: {isOnline: false}}
         ).then(() => {
-
-            console.log(id)
             res.send('Done')
         }).catch(() => {
             res.send('Error')
