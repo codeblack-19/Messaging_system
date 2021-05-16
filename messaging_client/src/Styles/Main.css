@@ -1,5 +1,28 @@
 ._mainWrapper ._pane{
     display: flex;
-    height: 92.5vh;
+    height: calc(100vh - 57px);
     overflow: hidden;
+    position: relative;
+}
+
+nav .navbar-toggler{
+    display: none ;
+}
+
+
+@media (max-width: 605px){
+    .LeftPaneWrapper{
+        width: 0px;
+        padding: 0px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    nav .navbar-toggler{
+        background-color: aliceblue !important;
+        margin-right: 10px;
+        color: aliceblue;
+        display: block;
+    }
+
 }

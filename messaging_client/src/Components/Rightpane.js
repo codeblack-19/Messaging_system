@@ -19,23 +19,46 @@ function Rightpane() {
 
     function Sendmessage(){
         if (userdata.blockedIds !== undefined){
-            userdata.blockedIds.forEach(element => {
-                if (element._id === userdata.currentlyChatting) {
-                    alert("Please Unblock the user to unable chat")
-                }else{
-                    if(isAuthenticated && message !== ""){
-                        axios.post('http://localhost:3001/users/api/v1/message', { Uid: userdata._id, Oid: userdata.currentlyChatting, message: message })
-                            .then((doc) => {
-                                setmessage("")
-                                inputRef.current.value = ""
-                            }).catch((e) => {
-                                console.log(e.message)
-                            })
-                    } else if (message === ""){
-                        alert("Please Enter a message or check if you've logged in")
+            if (userdata.blockedIds.length !== 0){
+                userdata.blockedIds.forEach(element => {
+                    if (element._id === userdata.currentlyChatting) {
+                        return alert("Please Unblock the user to unable chat")
+                    } else {
+                        if (isAuthenticated && message !== "") {
+                            var chzone = document.getElementById('_chtzone');
+                            axios.post('http://localhost:3001/users/api/v1/message', { Uid: userdata._id, Oid: userdata.currentlyChatting, message: message })
+                                .then((doc) => {
+                                    setmessage("")
+                                    inputRef.current.value = ""
+                                    setTimeout(() => {
+                                        chzone.scrollTop = chzone.scrollHeight;
+                                    }, 500)
+                                }).catch((e) => {
+                                    console.log(e.message)
+                                })
+                        } else if (message === "") {
+                            alert("Please Enter a message or check if you've logged in")
+                        }
                     }
+                })
+            }else{
+                if (isAuthenticated && message !== "") {
+                    var chzone = document.getElementById('_chtzone');
+                    axios.post('http://localhost:3001/users/api/v1/message', { Uid: userdata._id, Oid: userdata.currentlyChatting, message: message })
+                        .then((doc) => {
+                            setmessage("")
+                            inputRef.current.value = ""
+                            setTimeout(() => {
+                                chzone.scrollTop = chzone.scrollHeight;
+                            }, 500)
+                        }).catch((e) => {
+                            console.log(e.message)
+                        })
+                } else if (message === "") {
+                    alert("Please Enter a message or check if you've logged in")
                 }
-            });
+            }
+            
         }
 
         
@@ -58,8 +81,17 @@ function Rightpane() {
         }
     },[messages])
 
-    // console.log(messages)
+    useEffect(() => {
+        let mount = true;
+        if(mount){
+            setTimeout(() => {
+                var chzone = document.getElementById('_chtzone');
+                chzone.scrollTop = chzone.scrollHeight;
+            },3000)
+        }
 
+        return () => mount = false;
+    },[])
 
     return (
         <div className="rightPane">
@@ -72,7 +104,7 @@ function Rightpane() {
                     )
                 }
             </div>
-            <div className="_ChartZone">
+            <div className="_ChartZone" id="_chtzone">
                 {
                     messages.map((item, i) => {
                         return(
@@ -80,7 +112,7 @@ function Rightpane() {
                                 <p className="_ms_main">
                                     {item.Message}
                                 </p>
-                                <p className="_ms_date">
+                                <p className="_ms_date text-right">
                                     <small>{item.date}</small>
                                 </p>
                             </div>

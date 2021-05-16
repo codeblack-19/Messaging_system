@@ -42,7 +42,7 @@ function Leftpane(){
     }
 
     return(
-        <div className="LeftPaneWrapper">
+        <div className="LeftPaneWrapper" id="lpw">
             <div className="_lp_inner">
                 {
                     isAuthenticated? (

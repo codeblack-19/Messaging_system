@@ -1,14 +1,15 @@
 .rightPane{
     width: 100%;
     background-color: rgb(233, 230, 230);
-    /* padding: 5px; */
-    height: 92.5vh;
+    height: calc(100vh - 57px);
+    position: relative;
 }
 
 .rightPane ._rp_header{
     background-color: white;
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
     align-items: center;
 }
 
@@ -46,9 +47,9 @@
 }
 
 ._ChartZone{
-    height: 77%;
+    height: calc(100vh - (57px + 60px + 72px));
     background-color: rgb(78, 78, 78);
-    padding: 5px;
+    padding: 5px 5px 5px 5px;
     overflow-y: auto;
 }
 
@@ -62,7 +63,16 @@
     margin: 5px 0 10px 0;
     padding: 10px;
     max-width: 500px;
+    position: relative;
 }
+
+/* ._ChartZone ._message ._ms_main{
+    min-width: 100px !important;
+}
+
+._ChartZone ._message ._ms_date{
+    width: auto;
+} */
 
 ._ChartZone ._message p{
     margin: 0;
@@ -74,23 +84,25 @@
 }
 
 ._ChartZone .me {
-    /* float: right; */
     background-color: azure;
-    display: block;
     margin-left: auto;
 }
 
 ._messageBox{
+    position: absolute;
     background-color: whitesmoke;
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
     padding: 5px;
+    width: 100%;
+    bottom: 1px;
 }
 
 ._messageBox ._inputBox{
     width: 90%;
     margin: 2px;
+    display: flex;
+    align-items: center;
 }
 
 ._messageBox textarea{
@@ -99,7 +111,7 @@
     border: none;
     box-shadow: 0 0 2px 1px gray;
     border-radius: 15px;
-    resize: none;
+    resize: vertical;
 }
 
 ._messageBox textarea:focus{
@@ -114,5 +126,6 @@
 }
 
 ._messageBox .send_button:hover{
-    font-size: 30px;
+    /* font-size: 30px; */
+    opacity: .9;
 }

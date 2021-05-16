@@ -2,7 +2,8 @@
     width: 300px;
     background-color: rgb(187, 187, 187);
     padding: 5px;
-    height: 92.5vh;
+    height: calc(100vh - 57px);
+    transition: .3s;
 }
 
 ._lp_inner{
@@ -49,7 +50,7 @@
     padding: 5px;
     border-radius: 10px;
     margin: 0 0 5px 0;
-    height: 43%;
+    min-height: 150px;
 }
 
 ._onlineUsers ._all_ol_users{
@@ -99,7 +100,8 @@
     background-color: white;
     padding: 5px;
     border-radius: 10px;
-    height: 43%;
+    min-height: 150px;
+    margin-bottom: 5px;
 }
 
 ._blockedUsers h3{

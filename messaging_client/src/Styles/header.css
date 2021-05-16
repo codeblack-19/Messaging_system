@@ -1,3 +1,11 @@
+.header{
+    height: 57px;
+}
+
+.header .navbar-nav{
+    flex-direction: row;
+}
+
 .header .navbar-brand{
     font-weight: bold;
     font-family: 'calibri';
