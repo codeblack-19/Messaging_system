@@ -10,7 +10,7 @@
 /build
 
 # misc
-.appConfig.json
+appConfig.json
 
 .DS_Store
 .env.local
