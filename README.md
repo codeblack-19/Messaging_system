@@ -1,6 +1,6 @@
 ## FastText Instant Messaging App
 
-This application was created with the create-react-app frameword, which is used for frontend development in almost every part of the world. 
+This application was created with the create-react-app framework, which is used for frontend development in almost every part of the world. 
 
 This frontend application communticates with an external Api which handles all the database 
 and authentication operation. 
